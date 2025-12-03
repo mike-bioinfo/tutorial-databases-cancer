@@ -13,6 +13,7 @@ SEQKIT: https://bioinf.shenwei.me/seqkit/
 PICARD: https://broadinstitute.github.io/picard/
 SAMTOOLS: https://www.htslib.org/
 BWA: https://github.com/lh3/bwa
+GATK: https://github.com/broadinstitute/gatk/releases
 
 ## Download Human Reference Genome
 
