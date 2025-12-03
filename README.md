@@ -141,7 +141,7 @@ zcat Cosmic_NonCodingVariants_v102_GRCh38.vcf.gz | awk '{if($0 !~ /^#/) print "c
 ```
 
 ## If it is necessary, you can also remove the "chr" from vcf file.
-## Adding or removing prefix "chr" in vcf databases files are critical for a correcting annotation and interpretation of results.
+## Adding or removing prefix "chr" in vcf databases files are critical for a comprehensive annotation and interpretation of results.
 
 ``` bash
 zcat Cosmic_CompleteTargetedScreensMutant_v102_GRCh38.vcf.gz | awk '{gsub(/^chr/,""); print}' > no_chr.vcf
