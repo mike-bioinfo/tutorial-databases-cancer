@@ -58,7 +58,7 @@ wget https://ftp.ncbi.nlm.nih.gov/snp/organisms/human_9606_b151_GRCh38p7/VCF/00-
 wget https://ftp.ncbi.nlm.nih.gov/pub/clinvar/vcf_GRCh38/clinvar.vcf.gz
 ```
 
-## Extract Major Chromosomes
+## Extract Major Chromosomes ID
 
 ``` bash
 grep '>' GRCh38.primary_assembly.genome.fa | head -n25 > ids_chr.txt
