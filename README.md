@@ -132,6 +132,21 @@ zcat gencode.v48.annotation.modified.gtf.gz | grep -P "\tgene\t" | cut -f1,4,5,7
 bwa index GRCh38.primary_assembly.genome.final.fa
 ```
 
+## Changing the vcf annotation adding "chr" prefix to chromosome names in COSMIC vcf file (https://cancer.sanger.ac.uk/cosmic/download/cosmic)
+
+``` bash
+zcat Cosmic_CompleteTargetedScreensMutant_v102_GRCh38.vcf.gz | awk '{if($0 !~ /^#/) print "chr"$0; else print $0}' > Cosmic_CompleteTargetedScreensMutant_v102_GRCh38_modified.vcf
+zcat Cosmic_GenomeScreensMutant_v102_GRCh38.vcf.gz | awk '{if($0 !~ /^#/) print "chr"$0; else print $0}' > Cosmic_GenomeScreensMutant_v102_GRCh38_modified.vcf
+zcat Cosmic_NonCodingVariants_v102_GRCh38.vcf.gz | awk '{if($0 !~ /^#/) print "chr"$0; else print $0}' > Cosmic_NonCodingVariants_v102_GRCh38_modified.vcf
+```
+
+## If it is necessary, you can also remove the "chr" from vcf file.
+## Adding or removing prefix "chr" in vcf databases files are critical for a correcting annotation and interpretation of results.
+
+``` bash
+zcat Cosmic_CompleteTargetedScreensMutant_v102_GRCh38.vcf.gz | awk '{gsub(/^chr/,""); print}' > no_chr.vcf
+```
+
 ## Notes
 
 -   Ensure consistent genome versions across FASTA, GTF, GFF3, dbSNP,
