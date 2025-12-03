@@ -149,8 +149,9 @@ zcat Cosmic_CompleteTargetedScreensMutant_v102_GRCh38.vcf.gz | awk '{gsub(/^chr/
 
 ## Notes
 
+-   Please make sure in your vcf databases and annotations are following the same naming convention about chromosomes (chr or simply numbers, i.e chr1 or 1).
 -   Ensure consistent genome versions across FASTA, GTF, GFF3, dbSNP,
-    ClinVar, PON, and gnomAD.
+    ClinVar, PON, and gnomAD.    
 -   GATK requires `.fa`, `.fa.fai`, `.dict`, and indexed `.vcf.gz` +
     `.tbi`.
 -   Always verify file checksums.
