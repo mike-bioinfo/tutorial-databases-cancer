@@ -9,7 +9,6 @@ variant workflows.
 
 ## Software required
 
-Linux environment
 SEQKIT: https://bioinf.shenwei.me/seqkit/
 PICARD: https://broadinstitute.github.io/picard/
 SAMTOOLS: https://www.htslib.org/
